@@ -1,0 +1,8 @@
+<h2>New movie to List</h2>
+
+<%= simple_form_for(@list) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit class: 'btn-submit'%>
+<%end%>
+
+<%= link_to "Go 🔙 to all lists", lists_path%>

@@ -1,0 +1,8 @@
+<h3><%=@list.name%></h3>
+
+<p class="btn-add"><%= link_to "Add movie", new_list_bookmark_path(@list)%></p>
+<%= link_to "Go to all lists", 'btn btn-primary' lists_path %>
+<% @list.bookmarks.each do |bookmark| %>
+  <%= bookmark.comment %>
+  <%= bookmark.movie.title %>
+<% end %>
